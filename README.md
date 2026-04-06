@@ -67,17 +67,18 @@ Three roles are supported — **Viewer**, **Analyst**, and **Admin**.
 |---|:---:|:---:|:---:|
 | Register / Login | ✅ | ✅ | ✅ |
 | View own dashboard | ✅ | ✅ | ✅ |
-| View all transactions | ❌ | ✅ | ✅ |
-| Create transaction | ❌ | ✅ | ✅ |
-| Update transaction | ❌ | ✅ | ✅ |
-| Delete transaction | ❌ | ❌ | ✅ |
+| List all transactions | ✅ | ✅ | ✅ |
+| View single transaction by ID | ❌ | ✅ | ✅ |
+| Create transaction | ❌ | ❌ | ✅ |
+| Update transaction | ❌ | ❌ | ✅ |
+| Delete transaction (soft) | ❌ | ❌ | ✅ |
 | Manage users | ❌ | ❌ | ✅ |
 
-> **Viewers** can only access dashboard summary data scoped to their own transactions. They cannot view, create, update, or delete any transaction records.
+> **Viewers** can list all transactions and access dashboard data scoped to their own records. They cannot fetch a single transaction by ID, nor create, update, or delete anything.
 >
-> **Analysts** can view all transactions across all users and access the full dashboard. They can create and update transactions but cannot delete.
+> **Analysts** can list all transactions and fetch any single transaction by ID. They have full dashboard access across all users. They cannot create, update, or delete transactions.
 >
-> **Admins** have full access — including soft-deleting transactions and managing user accounts.
+> **Admins** have full access — creating, updating, and soft-deleting transactions, managing user accounts, and viewing everything.
 
 ---
 

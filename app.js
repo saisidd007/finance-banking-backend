@@ -16,6 +16,10 @@ app.use('/api/auth',         authRouter);
 app.use('/api/transactions', transactionRouter);
 app.use('/api/dashboard',    dashboardRouter);
 
+app.get('/', (req, res) => {
+    res.send("API is running 🚀");
+});
+
 // ─── HEALTH CHECK ─────────────────────────────────────────────────────────────
 app.get('/health', (req, res) => res.status(200).json({ status: 'ok' }));
 
